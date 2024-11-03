@@ -19,7 +19,7 @@
 .cart-number{
   color: whitesmoke;
   padding-left: 0.5rem;
-  font-size: x-small;
+  font-size: small;
 }
 .div-item-container{
   display: flex;
