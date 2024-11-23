@@ -7,7 +7,7 @@
   justify-content: space-around;
   align-items: center;
 }
-.a-estilos{
+.NavLink-estilos{
   color: whitesmoke;
   text-decoration: none;
 }
@@ -21,7 +21,9 @@
   padding-left: 0.5rem;
   font-size: small;
 }
-.div-item-container{
+.greeting-h1{
+  color: whitesmoke;
+  padding: 2rem;
   display: flex;
   margin: 2rem auto;
   justify-content: center;
@@ -29,7 +31,4 @@
   width: 50%;
   background-color: rgb(0, 100, 0);
   border-radius: 10px;
-}
-.greeting-h1{
-  color: whitesmoke;
 }

@@ -1,13 +1,14 @@
 import ShoppingCart from "./ShoppingCart"
+import { NavLink } from "react-router-dom"
 const NavbarComponent= () =>{
     return(
         <nav className="nav-estilos">
-            <a className="a-estilos">PLANTAS</a>
-            <a className="a-estilos">De Temporada</a>
-            <a className="a-estilos">Lo Clásico</a>
-            <a className="a-estilos">Lo Más Vendido</a>
-            <a className="a-estilos">Promociones</a>
-            <ShoppingCart number={5}/>
+            <NavLink className="NavLink-estilos" to={"/"}>PLANTAS</NavLink>
+            <NavLink className="NavLink-estilos" to={"/products/temporada"}>Temporada</NavLink>
+            <NavLink className="NavLink-estilos" to={"/products/clasico"}>Clásico</NavLink>
+            <NavLink className="NavLink-estilos" to={"/products/mas vendido"}>Más Vendido</NavLink>
+            <NavLink className="NavLink-estilos" to={"products/promociones"}>Promociones</NavLink>
+            <NavLink to={"/cart"}><ShoppingCart number={5}/></NavLink> 
         </nav>
     )
 }
