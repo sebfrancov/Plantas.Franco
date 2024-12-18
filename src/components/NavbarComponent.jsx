@@ -8,7 +8,7 @@ const NavbarComponent= () =>{
             <NavLink className="NavLink-estilos" to={"/products/clasico"}>Clásico</NavLink>
             <NavLink className="NavLink-estilos" to={"/products/mas vendido"}>Más Vendido</NavLink>
             <NavLink className="NavLink-estilos" to={"products/promociones"}>Promociones</NavLink>
-            <NavLink to={"/cart"}><ShoppingCart number={5}/></NavLink> 
+            <NavLink to={"/cart"}><ShoppingCart/></NavLink> 
         </nav>
     )
 }
