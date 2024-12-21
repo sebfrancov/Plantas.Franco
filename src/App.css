@@ -53,3 +53,14 @@
   width: 75%;
   justify-items: center;
 }
+.div-cart-item{
+  display: flex;
+  flex-direction: column;
+  .cart-img{
+  width: 20%;
+}
+}
+.form-checkout{
+  display: flex;
+  flex-direction: column;
+}

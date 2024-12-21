@@ -1,11 +1,11 @@
 import React, {useState, useEffect} from "react"
 import ItemCount from "./ItemCount"
-import { getProducts } from "../mock/data"
+import { getProducts, productsFB } from "../mock/data"
 import ItemList from "./ItemList"
 import { useParams } from "react-router-dom" 
 import Eventos from "../components/Ejemplos/Ejemplo Eventos/Eventos"
 import Loader from "./Loader"
-import {collection, getDocs, query, where} from "firebase/firestore"
+import {addDoc, collection, getDocs, query, where} from "firebase/firestore"
 import { db } from "../services/firebase"
 
 const ItemListContainer = ({greeting})=>{
@@ -51,8 +51,14 @@ const ItemListContainer = ({greeting})=>{
         .catch((error) => console.log(error))
         .finally(()=> setLoading(false))
     },[category]) */
+    /* //FUNCIÓN PARA AGREGAR ITEMS DINÁMICAMENTE
+    const addData =()=>{
+        const collectionToAdd = collection(db, "productos")
+        productsFB.map((item)=> addDoc(collectionToAdd, item))
+    } */
     return(
-        <div>            
+        <div>  
+            {/* <button onClick={addData}>Agregar a Fire Base</button> //PARA AGREGAR LOS ITEMS DINÁMICAMENTE DESDE MOCKS, SOLO SE HACE UNA VEZ */}          
             <h1 className="greeting-h1">{greeting} <span>{category}</span></h1> 
             {loading? <Loader/> : <ItemList products={products}/>}
         </div>

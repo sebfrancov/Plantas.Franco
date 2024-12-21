@@ -1,9 +1,16 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import NavbarComponent from "../components/NavbarComponent";
 
 export const CartContext = createContext();
+const prodFromLocalStorage = JSON.parse(localStorage.getItem('carrito')) || []
 export const CartProvider =({children})=>{
-    const [cart, setCart] = useState([])
+    const [cart, setCart] = useState(prodFromLocalStorage)
+
+    //Código para mantener el cart persistente después de refrescar
+    useEffect(()=>{
+        localStorage.setItem('carrito',JSON.stringify(cart))
+    },[cart])
+
     const addToCart = (item, quantity)=>{
         //Lógica para sumar productos iguales en el carrito y no repetirlos.
         if(isInCart(item.id)){
