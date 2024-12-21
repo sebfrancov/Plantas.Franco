@@ -7,7 +7,7 @@ Es una iniciativa encaminada a brindarte las mejores opciones para avivar tu hog
 - Ejecute npm run dev en la termianl para levnatr el servidor local.
 - Disfrute la experiencia (opcional). 
 ### Visite la página online 🌐
-Pase y averigüe en nuestra págine qué plantas pueden ser su compañía de ahora en más []()
+Pase y averigüe en nuestra págine qué plantas pueden ser su compañía de ahora en más [PLANTAS](https://plantas-franco.vercel.app/)
 ### Librerías usadas 📚
 - [FireBase](https://firebase.google.com/) : Usada como base de datos.
 - [React Router Dom](https://reactrouter.com/) : Navegación por rutas.
